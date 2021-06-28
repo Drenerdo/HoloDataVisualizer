@@ -36,7 +36,7 @@ public class WeatherDataController : MonoBehaviour
 
     IEnumerator getWeatherData()
     {
-        UnityWebRequest www = UnityWebRequest.Get("#");
+        UnityWebRequest www = UnityWebRequest.Get("");
         yield return www.SendWebRequest();
 
         if(www.isNetworkError || www.isHttpError)
@@ -76,6 +76,7 @@ public class WeatherDataController : MonoBehaviour
                     {
                         weatherIcon[0].SetActive(true);
                     }
+
                 }
             }
         }
