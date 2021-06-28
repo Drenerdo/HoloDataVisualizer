@@ -36,7 +36,7 @@ public class WeatherDataController : MonoBehaviour
 
     IEnumerator getWeatherData()
     {
-        UnityWebRequest www = UnityWebRequest.Get("api.openweathermap.org/data/2.5/weather?q=Las Vegas,NV,US&units=imperial&appid=d22f6ff0c5eef3a0847afa4d193ed206");
+        UnityWebRequest www = UnityWebRequest.Get("#");
         yield return www.SendWebRequest();
 
         if(www.isNetworkError || www.isHttpError)
