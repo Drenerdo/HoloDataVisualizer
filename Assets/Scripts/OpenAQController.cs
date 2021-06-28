@@ -15,7 +15,7 @@ public class OpenAQController : MonoBehaviour
 
     IEnumerator getAQData()
     {
-        UnityWebRequest www = UnityWebRequest.Get("https://docs.openaq.org/v1/measurements?date_from=2000-01-01T00%3A00%3A00%2B00%3A00&date_to=2021-06-27T00%3A47%3A00%2B00%3A00&limit=100&page=1&offset=0&sort=desc&radius=1000&country_id=US&order_by=datetime");
+        UnityWebRequest www = UnityWebRequest.Get("#");
         yield return www.SendWebRequest();
 
         if(www.isNetworkError || www.isHttpError)
