@@ -28,9 +28,11 @@ public class Coord
     public double lat;
 }
 
-[Serializable]
+[System.Serializable]
 public class WeatherItem
 {
+    public static WeatherItem instance;
+
     public int id;
     public string main;
     public string description;

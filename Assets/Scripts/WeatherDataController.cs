@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using TMPro;
 
 public class WeatherDataController : MonoBehaviour
 {
 
     public GameObject[] weatherIcon;
+
+    public TextMeshPro locationName;
+    public TextMeshPro tempValue;
 
     // Start is called before the first frame update
     void Start()
@@ -52,9 +56,23 @@ public class WeatherDataController : MonoBehaviour
 
                 //weatherIcon[0].SetActive(true);
 
-                foreach(WeatherData w in weatherdata.weather)
+                //weatherdata.name = locationName.text;
+
+                locationName.text = weatherdata.name;
+                
+
+                Debug.Log(weatherdata.name);
+
+
+
+                foreach(WeatherItem w in weatherdata.weather)
                 {
-                    Debug.Log("" + w);
+                    Debug.Log(w.description);
+                    
+                    if(w.description == "clear sky")
+                    {
+                        weatherIcon[0].SetActive(true);
+                    }
                 }
             }
         }
