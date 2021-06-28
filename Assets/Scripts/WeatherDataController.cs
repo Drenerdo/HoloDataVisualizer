@@ -58,6 +58,7 @@ public class WeatherDataController : MonoBehaviour
 
                 //weatherdata.name = locationName.text;
 
+
                 locationName.text = weatherdata.name;
                 
 
